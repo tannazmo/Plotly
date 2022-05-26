@@ -94,12 +94,15 @@ function buildCharts(sample) {
         y: yticks,
         text: otuLabelArray.slice(0,10).reverse(),
         type: "bar",
-        orientation: "h"
+        orientation: "h",
+        marker: {
+          color: 'rgb(211, 141, 199)'
+        }
       }
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found",
+      title: "Top 10 Bacteria Cultures Found"
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
@@ -153,13 +156,13 @@ function buildCharts(sample) {
       {
         value: wfreq,
         title: { 
-          text: "<b>Belly Button Washing Frequency</b> (Scrubs Per Week)" , 
-          font: { size: 16 }
+          text: "Scrubs Per Week" ,
+          font: { size: 14 }
         },
         type: "indicator",
         mode: "gauge+number",
-        gauge: { axis: { range: [null, 10] },
-          bar: { color: "black" },
+        gauge: { axis: { visible: true, range: [null, 10], tickwidth: 0.6 },
+          bar: { color: "gray" },
           steps: [
             { range: [0, 2], color: "red" },
             { range: [2, 4], color: "orange" },
@@ -173,8 +176,11 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 600, 
-      height: 400 
+      title: {
+        text: "<b>Belly Button Washing Frequency</b>", 
+        font: { size: 16 }, 
+        margin: { t: 0, l: 10, r: 0, b: 0 , pad:4}
+      }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
