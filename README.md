@@ -17,3 +17,6 @@ Bootstrap and CSS are used for changing the appearanch of the index page:
 - very light background added to the page
 - layout slightly changed (out of the 12 columns, I changed the 2,5,5 grid layour to 2,4,6 grid layout)
 - jumbotron subtitle color changed
+
+
+![Belly_Button_Dashboard](static/images/Screenshot.png "Belly Button Dashboard")
