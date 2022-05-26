@@ -1,6 +1,8 @@
 # Plotly
 
 
+This interactive page is available on GitHub Pages by clicking here: https://tannazmo.github.io/Plotly/
+
 The pages loads with the bacterial data and charts of the participant # 940.
 But we can change the participant and look at the information and charts belonging to another participant.
 
